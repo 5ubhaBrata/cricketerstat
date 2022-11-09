@@ -73,15 +73,15 @@ def main():
             st.sidebar.image(imgs,caption=["image " + str(x) for x in range( len(imgs))])
             
             st.image(imgs[int(pick_img.split()[1])])
-            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][0].items()))
-            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][1].items()))
-            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][2].items()))
+            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][0].items()).transpose())
+            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][1].items()).transpose())
+            st.dataframe(pd.DataFrame(battersc(listOfP[int(pick_img.split()[1])])[0][2].items()).transpose())
 
         else:
             st.image(imgs)
-            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][0].items()))
-            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][1].items()))
-            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][2].items()))
+            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][0].items()).transpose())
+            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][1].items()).transpose())
+            st.dataframe(pd.DataFrame(battersc(listOfP[0])[0][2].items()).transpose())
 
 
 if __name__ == '__main__':
